@@ -1,5 +1,7 @@
 package com.example.listycity;
 
+import java.util.Objects;
+
 /**
  * This is a class that defines a City.
  */
@@ -66,8 +68,6 @@ public class City implements Comparable {
      */
     @Override
     public int hashCode() {
-        int result = city.hashCode();
-        result = 31 * result + province.hashCode();
-        return result;
+        return Objects.hash(city, province);
     }
 }
